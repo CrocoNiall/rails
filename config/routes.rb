@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
   get '/pics/new' => 'home#new'
+  get '/pics/:id' => 'home#show'
+  get '/pics/:id/edit' => 'home#edit'
+  put '/pics/:id' => 'home#update'
 
   post '/pics/create' => 'home#create'
 

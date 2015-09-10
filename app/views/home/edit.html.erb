@@ -1,0 +1,11 @@
+<h2>Edit Pic.me</h2>
+
+<form action='/pics/<%= "#{@pic.id}"%>' method="put">
+  <label for="pic[name]">Name:</label>
+  <input name="pic[name]" value='<%= "#{@pic.name}" %>'>
+
+  <label for="pic[url]">Photo URL:</label>
+  <input name="pic[url]" value='<%= "#{@pic.url}" %>'>
+
+  <input type="submit" value='put'>
+</form>

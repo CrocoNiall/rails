@@ -13,16 +13,32 @@ class HomeController < ApplicationController
   def create
     @pic = Pic.new(name: params[:pic]['name'], url: params[:pic]['url'])
       if @pic.save
-        redirect_to "/" 
-  #redirect("/pics/#{@pic.pid}")
+      
+        redirect_to("/pics/#{@pic[:id]}")
       else
-        erb(:"/pics/new")
+        redirect_to("/pics/new")
     end
-
-    # add it to my DB\
-    # render the page i want
-
   end
+
+  def edit 
+    @pic = Pic.find(params[:id])
+  end
+
+  def update
+      @pic = Pic.find(params[:id])
+    if @pic.update_attributes!(name: params[:pic]['name'], url: params[:pic]['url'])
+      puts 'trying to update'
+      redirect_to("/pic/#{@pic[:id]}")
+    else 
+      puts 'didnt work'
+    end
+  end
+
+
+  def show 
+    @pic = Pic.find(params[:id])
+  end
+
 
 
 end
