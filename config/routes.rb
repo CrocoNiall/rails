@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   get '/' => 'home#index'
-  
+  get '/pics/new' => 'home#new'
+
+  post '/pics/create' => 'home#create'
 
 
 

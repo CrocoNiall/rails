@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PicTube</title>
+  <title><%= @title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header> 
+    <a href="/pics/new">Add an image</a>
 
-<h1>This is the layout</h1>
+  </header>
 
-<%= yield %>
+  <h1>This is the layout</h1> 
+
+  <%= yield %>
 
 </body>
 </html>

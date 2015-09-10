@@ -1,1 +1,10 @@
 <h1>This is the Index Page</h1>
+
+<% @pics.each do |pic| %>
+  <div class='image-container'>
+  <img src="<%= pic.url %>" alt="<%= pic.name %> pic" >
+  <a href="/pics/<%= pic.id %>"> <%= pic.name %> </a>
+  <a href="/pics/<%= pic.id %>/edit"> Change This Pic!</a>
+  </div>
+<% end %>
+
