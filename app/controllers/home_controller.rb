@@ -39,6 +39,12 @@ class HomeController < ApplicationController
     @pic = Pic.find(params[:id])
   end
 
+# ​ private
 
+#   def pic_params
+#     params.require(:pic).permit(:Name, :Url)
+#   end
 
 end
+
+
